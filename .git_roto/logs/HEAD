@@ -1,0 +1,89 @@
+0000000000000000000000000000000000000000 92e3c6f31cb3ae375741ed637f7691fe4fe1f56a Denis <5945069@alu.murciaeduca.es> 1761820284 +0100	clone: from github.com:DenisYKV/eportfolio.git
+92e3c6f31cb3ae375741ed637f7691fe4fe1f56a 92e3c6f31cb3ae375741ed637f7691fe4fe1f56a Denis <5945069@alu.murciaeduca.es> 1761820658 +0100	checkout: moving from master to nuestroPackage
+92e3c6f31cb3ae375741ed637f7691fe4fe1f56a f44884263b3bcf232c5ad6a829b2cd212a365cd8 Denis <5945069@alu.murciaeduca.es> 1761820714 +0100	commit: package actualizado
+f44884263b3bcf232c5ad6a829b2cd212a365cd8 92e3c6f31cb3ae375741ed637f7691fe4fe1f56a Denis <5945069@alu.murciaeduca.es> 1761822646 +0100	checkout: moving from nuestroPackage to master
+92e3c6f31cb3ae375741ed637f7691fe4fe1f56a 575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 Denis <5945069@alu.murciaeduca.es> 1761822707 +0100	pull upstream master: Fast-forward
+575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 Denis <5945069@alu.murciaeduca.es> 1762331949 +0100	checkout: moving from master to RutasCreadas
+575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 6fa5da4123ece737efedef24749126648af772a2 Denis <5945069@alu.murciaeduca.es> 1762332002 +0100	commit: Ejercicio rutas
+6fa5da4123ece737efedef24749126648af772a2 575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 Denis <5945069@alu.murciaeduca.es> 1762420107 +0100	checkout: moving from RutasCreadas to master
+575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 61b72d2271a5ffbd5ca42c5f6d54e45146f821f6 Denis <5945069@alu.murciaeduca.es> 1762420317 +0100	checkout: moving from master to alejandroRuta
+61b72d2271a5ffbd5ca42c5f6d54e45146f821f6 575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 Denis <5945069@alu.murciaeduca.es> 1762421202 +0100	checkout: moving from alejandroRuta to master
+575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 Denis <5945069@alu.murciaeduca.es> 1762421458 +0100	checkout: moving from master to master
+575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 61b72d2271a5ffbd5ca42c5f6d54e45146f821f6 Denis <5945069@alu.murciaeduca.es> 1762424973 +0100	checkout: moving from master to alejandroRuta
+61b72d2271a5ffbd5ca42c5f6d54e45146f821f6 575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 Denis <5945069@alu.murciaeduca.es> 1762425320 +0100	checkout: moving from alejandroRuta to master
+575bc6a8ef4e2c2060e0f99fd1a33bfd205c3706 578d64fa47a350f0fdd5c2461cf9e4700bc0e36a Denis <5945069@alu.murciaeduca.es> 1762425592 +0100	pull upstream master: Fast-forward
+578d64fa47a350f0fdd5c2461cf9e4700bc0e36a 578d64fa47a350f0fdd5c2461cf9e4700bc0e36a Denis <5945069@alu.murciaeduca.es> 1762934321 +0100	checkout: moving from master to nuevoLayout
+578d64fa47a350f0fdd5c2461cf9e4700bc0e36a 578d64fa47a350f0fdd5c2461cf9e4700bc0e36a Denis <5945069@alu.murciaeduca.es> 1763365087 +0100	checkout: moving from nuevoLayout to master
+578d64fa47a350f0fdd5c2461cf9e4700bc0e36a 4a3a30a59299180e6c2f380fb6aab51d4fb14687 Denis <5945069@alu.murciaeduca.es> 1763365319 +0100	checkout: moving from master to layout_alejandro
+4a3a30a59299180e6c2f380fb6aab51d4fb14687 578d64fa47a350f0fdd5c2461cf9e4700bc0e36a Denis <5945069@alu.murciaeduca.es> 1763365412 +0100	checkout: moving from layout_alejandro to master
+578d64fa47a350f0fdd5c2461cf9e4700bc0e36a 4a3a30a59299180e6c2f380fb6aab51d4fb14687 Denis <5945069@alu.murciaeduca.es> 1763365451 +0100	checkout: moving from master to layout_alejandro
+4a3a30a59299180e6c2f380fb6aab51d4fb14687 578d64fa47a350f0fdd5c2461cf9e4700bc0e36a Denis <5945069@alu.murciaeduca.es> 1763365763 +0100	checkout: moving from layout_alejandro to nuevoLayout
+578d64fa47a350f0fdd5c2461cf9e4700bc0e36a 4a3a30a59299180e6c2f380fb6aab51d4fb14687 Denis <5945069@alu.murciaeduca.es> 1763365872 +0100	checkout: moving from nuevoLayout to 4a3a30a59299180e6c2f380fb6aab51d4fb14687
+4a3a30a59299180e6c2f380fb6aab51d4fb14687 9fe2f1d652f52d9d03c56ba2bf54fe049b7009be Denis <5945069@alu.murciaeduca.es> 1763366845 +0100	pull upstream master: Fast-forward
+9fe2f1d652f52d9d03c56ba2bf54fe049b7009be 578d64fa47a350f0fdd5c2461cf9e4700bc0e36a Denis <5945069@alu.murciaeduca.es> 1763366925 +0100	checkout: moving from 9fe2f1d652f52d9d03c56ba2bf54fe049b7009be to master
+578d64fa47a350f0fdd5c2461cf9e4700bc0e36a 9fe2f1d652f52d9d03c56ba2bf54fe049b7009be Denis <5945069@alu.murciaeduca.es> 1763366943 +0100	pull upstream master: Fast-forward
+9fe2f1d652f52d9d03c56ba2bf54fe049b7009be 9fe2f1d652f52d9d03c56ba2bf54fe049b7009be Denis <5945069@alu.murciaeduca.es> 1763367124 +0100	checkout: moving from master to ejercicioVistas
+9fe2f1d652f52d9d03c56ba2bf54fe049b7009be de9849ce1730af3f616f84d7e999016129468e49 Denis <5945069@alu.murciaeduca.es> 1763369392 +0100	commit: creacion de nuevas Vista
+de9849ce1730af3f616f84d7e999016129468e49 9fe2f1d652f52d9d03c56ba2bf54fe049b7009be Denis <5945069@alu.murciaeduca.es> 1763449829 +0100	checkout: moving from ejercicioVistas to master
+9fe2f1d652f52d9d03c56ba2bf54fe049b7009be bdc05c81d5399ad47bc4924774dfb2d7f31976f7 Denis <5945069@alu.murciaeduca.es> 1763635679 +0100	pull upstream master: Fast-forward
+bdc05c81d5399ad47bc4924774dfb2d7f31976f7 bdc05c81d5399ad47bc4924774dfb2d7f31976f7 Denis <5945069@alu.murciaeduca.es> 1763637010 +0100	checkout: moving from master to rutasRama
+bdc05c81d5399ad47bc4924774dfb2d7f31976f7 d097dbda36af2a9f9e99eebed4a374986f7fef0c Denis <5945069@alu.murciaeduca.es> 1763967941 +0100	commit: cambio de rutas
+d097dbda36af2a9f9e99eebed4a374986f7fef0c fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 Denis <5945069@alu.murciaeduca.es> 1763968205 +0100	commit: cambio de rutas con correccion del controlador
+fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 bdc05c81d5399ad47bc4924774dfb2d7f31976f7 Denis <5945069@alu.murciaeduca.es> 1763968934 +0100	checkout: moving from rutasRama to master
+bdc05c81d5399ad47bc4924774dfb2d7f31976f7 fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 Denis <5945069@alu.murciaeduca.es> 1763969052 +0100	checkout: moving from master to rutasRama
+fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 5627530420d44ea258040bb70c91b545908107d5 Denis <5945069@alu.murciaeduca.es> 1763969233 +0100	checkout: moving from rutasRama to controladorNuevo
+5627530420d44ea258040bb70c91b545908107d5 bdc05c81d5399ad47bc4924774dfb2d7f31976f7 Denis <5945069@alu.murciaeduca.es> 1763969276 +0100	checkout: moving from controladorNuevo to master
+bdc05c81d5399ad47bc4924774dfb2d7f31976f7 fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 Denis <5945069@alu.murciaeduca.es> 1763969312 +0100	checkout: moving from master to rutasRama
+fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 5627530420d44ea258040bb70c91b545908107d5 Denis <5945069@alu.murciaeduca.es> 1763969352 +0100	checkout: moving from rutasRama to controladorNuevo
+5627530420d44ea258040bb70c91b545908107d5 fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 Denis <5945069@alu.murciaeduca.es> 1763969460 +0100	checkout: moving from controladorNuevo to rutasRama
+fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 7631c6ab056b371af05321c791470bbbb03b976f Denis <5945069@alu.murciaeduca.es> 1763969496 +0100	merge controladorNuevo: Merge made by the 'recursive' strategy.
+7631c6ab056b371af05321c791470bbbb03b976f a77eeceecac8900595860570456899c6b9ba6b81 Denis <5945069@alu.murciaeduca.es> 1763969656 +0100	merge vistaShow: Merge made by the 'recursive' strategy.
+a77eeceecac8900595860570456899c6b9ba6b81 4b278ebfc674ba71ce4ba7f4303786bb77fe2a7f Denis <5945069@alu.murciaeduca.es> 1763969785 +0100	merge vistaEditCreate: Merge made by the 'recursive' strategy.
+4b278ebfc674ba71ce4ba7f4303786bb77fe2a7f 95190a815254c02dd8e7c002558825453ce47a4f Denis <5945069@alu.murciaeduca.es> 1763969891 +0100	merge nuevoIndex: Merge made by the 'recursive' strategy.
+95190a815254c02dd8e7c002558825453ce47a4f 236dbf2ac8f03c6727308102a9cfab021b2132e4 Denis <5945069@alu.murciaeduca.es> 1763973214 +0100	commit: eportfolio en funcionamiento
+236dbf2ac8f03c6727308102a9cfab021b2132e4 bdc05c81d5399ad47bc4924774dfb2d7f31976f7 Denis <5945069@alu.murciaeduca.es> 1764055327 +0100	checkout: moving from rutasRama to master
+bdc05c81d5399ad47bc4924774dfb2d7f31976f7 4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 Denis <5945069@alu.murciaeduca.es> 1764745523 +0100	pull upstream master: Fast-forward
+4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 Denis <5945069@alu.murciaeduca.es> 1764746046 +0100	checkout: moving from master to ejercicio4
+4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 Denis <5945069@alu.murciaeduca.es> 1764746362 +0100	checkout: moving from ejercicio4 to master
+4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 Denis <5945069@alu.murciaeduca.es> 1764746417 +0100	checkout: moving from master to CriterioEvaluacion
+4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 4e6fb2db2030ad82c8e9d1c6efbf5fb6e23b2695 Denis <5945069@alu.murciaeduca.es> 1764753224 +0100	commit: ejercicio eportfolio Criterio Evaluacion
+4e6fb2db2030ad82c8e9d1c6efbf5fb6e23b2695 af5f248a3baa6128d92a9c36981609129a987204 Denis <5945069@alu.murciaeduca.es> 1764839834 +0100	checkout: moving from CriterioEvaluacion to ciclosFormativosAlejandro
+af5f248a3baa6128d92a9c36981609129a987204 af5f248a3baa6128d92a9c36981609129a987204 Denis <5945069@alu.murciaeduca.es> 1764839841 +0100	checkout: moving from ciclosFormativosAlejandro to ciclosFormativosAlejandro
+af5f248a3baa6128d92a9c36981609129a987204 4e6fb2db2030ad82c8e9d1c6efbf5fb6e23b2695 Denis <5945069@alu.murciaeduca.es> 1764840073 +0100	checkout: moving from ciclosFormativosAlejandro to CriterioEvaluacion
+4e6fb2db2030ad82c8e9d1c6efbf5fb6e23b2695 d674ed246143e410c31c27e7892fa36eed2a4a8c Denis <5945069@alu.murciaeduca.es> 1764840890 +0100	commit (merge): merge rama alejandro
+d674ed246143e410c31c27e7892fa36eed2a4a8c 2ff8eb7e7ab109fdd7e4a9a0460b23098fa6c5a1 Denis <5945069@alu.murciaeduca.es> 1764841557 +0100	commit (merge): vistas de jaime merge
+2ff8eb7e7ab109fdd7e4a9a0460b23098fa6c5a1 ff692283985782326b4c46a5a6510e61f10c2d4c Denis <5945069@alu.murciaeduca.es> 1764849118 +0100	commit: metodos postCreate y putCreate
+ff692283985782326b4c46a5a6510e61f10c2d4c 0be58a4a073cbdec2c09c4a9b7d47f1fa01b34b1 Denis <5945069@alu.murciaeduca.es> 1764849472 +0100	checkout: moving from CriterioEvaluacion to tablaCristian
+0be58a4a073cbdec2c09c4a9b7d47f1fa01b34b1 ff692283985782326b4c46a5a6510e61f10c2d4c Denis <5945069@alu.murciaeduca.es> 1764850516 +0100	checkout: moving from tablaCristian to CriterioEvaluacion
+ff692283985782326b4c46a5a6510e61f10c2d4c f1d7419a79c7713916d9aa84a7d2a40bbd860fd2 Denis <5945069@alu.murciaeduca.es> 1764850777 +0100	commit: metodos postCreate y putCreate
+f1d7419a79c7713916d9aa84a7d2a40bbd860fd2 4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 Denis <5945069@alu.murciaeduca.es> 1765264067 +0100	checkout: moving from CriterioEvaluacion to master
+4e1c034b8c49b1fe3f74b25dd1aacc0e4a90e874 3ff39c6d99101fc6ea9c78bcb10f60344dbe9758 Denis <5945069@alu.murciaeduca.es> 1765264114 +0100	pull upstream master: Fast-forward
+3ff39c6d99101fc6ea9c78bcb10f60344dbe9758 3ff39c6d99101fc6ea9c78bcb10f60344dbe9758 Denis <5945069@alu.murciaeduca.es> 1765265589 +0100	checkout: moving from master to correcciones
+3ff39c6d99101fc6ea9c78bcb10f60344dbe9758 3ff39c6d99101fc6ea9c78bcb10f60344dbe9758 Denis <5945069@alu.murciaeduca.es> 1765266313 +0100	checkout: moving from correcciones to master
+3ff39c6d99101fc6ea9c78bcb10f60344dbe9758 5a417c2618e42b3fa66f629eee2f6ce5ac9e2c70 Denis <5945069@alu.murciaeduca.es> 1765266326 +0100	pull upstream master: Fast-forward
+5a417c2618e42b3fa66f629eee2f6ce5ac9e2c70 c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765270866 +0100	pull upstream master: Fast-forward
+c02e0072e7b33327913b2ab965cb388b790b4b6d c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765271362 +0100	checkout: moving from master to clavesFK
+c02e0072e7b33327913b2ab965cb388b790b4b6d c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765355968 +0100	checkout: moving from clavesFK to master
+c02e0072e7b33327913b2ab965cb388b790b4b6d c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765355988 +0100	checkout: moving from master to master
+c02e0072e7b33327913b2ab965cb388b790b4b6d c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765359925 +0100	checkout: moving from master to autentificacionEportfolio
+c02e0072e7b33327913b2ab965cb388b790b4b6d a008d4f4b70d338fc244a3b4f9d19aa18bc52ee0 Denis <5945069@alu.murciaeduca.es> 1765359977 +0100	commit: autentificacion de eportfolio
+a008d4f4b70d338fc244a3b4f9d19aa18bc52ee0 c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765362125 +0100	checkout: moving from autentificacionEportfolio to master
+c02e0072e7b33327913b2ab965cb388b790b4b6d a008d4f4b70d338fc244a3b4f9d19aa18bc52ee0 Denis <5945069@alu.murciaeduca.es> 1765362363 +0100	checkout: moving from master to autentificacionEportfolio
+a008d4f4b70d338fc244a3b4f9d19aa18bc52ee0 c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765363499 +0100	checkout: moving from autentificacionEportfolio to master
+c02e0072e7b33327913b2ab965cb388b790b4b6d a008d4f4b70d338fc244a3b4f9d19aa18bc52ee0 Denis <5945069@alu.murciaeduca.es> 1765438348 +0100	checkout: moving from master to autentificacionEportfolio
+a008d4f4b70d338fc244a3b4f9d19aa18bc52ee0 a11a62fa13f0498910ed23de106593167272478c Denis <5945069@alu.murciaeduca.es> 1765443725 +0100	commit: autentificaciones de eportfolio
+a11a62fa13f0498910ed23de106593167272478c 7841168a29002dcca5f0d42021948cf9d4371d19 Denis <5945069@alu.murciaeduca.es> 1765444588 +0100	commit: autentificaciones de eportfolio con boton editar
+7841168a29002dcca5f0d42021948cf9d4371d19 c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765785156 +0100	checkout: moving from autentificacionEportfolio to master
+c02e0072e7b33327913b2ab965cb388b790b4b6d c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765868952 +0100	checkout: moving from master to master
+c02e0072e7b33327913b2ab965cb388b790b4b6d 74a87c94a2d61b8084050ffbb7133f6ffb57dd0c Denis <5945069@alu.murciaeduca.es> 1765869024 +0100	checkout: moving from master to autentificacionesAdrian
+74a87c94a2d61b8084050ffbb7133f6ffb57dd0c 74a87c94a2d61b8084050ffbb7133f6ffb57dd0c Denis <5945069@alu.murciaeduca.es> 1765869074 +0100	checkout: moving from autentificacionesAdrian to autentificacionesAdrian
+74a87c94a2d61b8084050ffbb7133f6ffb57dd0c 7841168a29002dcca5f0d42021948cf9d4371d19 Denis <5945069@alu.murciaeduca.es> 1765869085 +0100	checkout: moving from autentificacionesAdrian to autentificacionEportfolio
+7841168a29002dcca5f0d42021948cf9d4371d19 74a87c94a2d61b8084050ffbb7133f6ffb57dd0c Denis <5945069@alu.murciaeduca.es> 1765869101 +0100	checkout: moving from autentificacionEportfolio to autentificacionesAdrian
+74a87c94a2d61b8084050ffbb7133f6ffb57dd0c 7841168a29002dcca5f0d42021948cf9d4371d19 Denis <5945069@alu.murciaeduca.es> 1765870001 +0100	checkout: moving from autentificacionesAdrian to autentificacionEportfolio
+7841168a29002dcca5f0d42021948cf9d4371d19 c02e0072e7b33327913b2ab965cb388b790b4b6d Denis <5945069@alu.murciaeduca.es> 1765871986 +0100	checkout: moving from autentificacionEportfolio to master
+c02e0072e7b33327913b2ab965cb388b790b4b6d 2355a6bedb89d9463c676df54724b1e525320f73 Denis <5945069@alu.murciaeduca.es> 1765872003 +0100	pull upstream master: Fast-forward
+2355a6bedb89d9463c676df54724b1e525320f73 2355a6bedb89d9463c676df54724b1e525320f73 Denis <5945069@alu.murciaeduca.es> 1765872202 +0100	checkout: moving from master to avatar
+2355a6bedb89d9463c676df54724b1e525320f73 2355a6bedb89d9463c676df54724b1e525320f73 Denis <5945069@alu.murciaeduca.es> 1765909750 +0100	checkout: moving from avatar to master
+2355a6bedb89d9463c676df54724b1e525320f73 2355a6bedb89d9463c676df54724b1e525320f73 Denis <5945069@alu.murciaeduca.es> 1765909804 +0100	checkout: moving from master to avatar
+2355a6bedb89d9463c676df54724b1e525320f73 2355a6bedb89d9463c676df54724b1e525320f73 Denis <5945069@alu.murciaeduca.es> 1765910328 +0100	reset: moving to HEAD
+2355a6bedb89d9463c676df54724b1e525320f73 9ac30dddc8e9f192bd9f5cf981638f0b3b837c33 Denis <5945069@alu.murciaeduca.es> 1765910414 +0100	commit: avatar terminado

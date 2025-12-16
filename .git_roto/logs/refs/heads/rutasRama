@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 bdc05c81d5399ad47bc4924774dfb2d7f31976f7 Denis <5945069@alu.murciaeduca.es> 1763637010 +0100	branch: Created from HEAD
+bdc05c81d5399ad47bc4924774dfb2d7f31976f7 d097dbda36af2a9f9e99eebed4a374986f7fef0c Denis <5945069@alu.murciaeduca.es> 1763967941 +0100	commit: cambio de rutas
+d097dbda36af2a9f9e99eebed4a374986f7fef0c fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 Denis <5945069@alu.murciaeduca.es> 1763968205 +0100	commit: cambio de rutas con correccion del controlador
+fc22d7f42ee18ca31fde3222e3c4bd36670ebf10 7631c6ab056b371af05321c791470bbbb03b976f Denis <5945069@alu.murciaeduca.es> 1763969496 +0100	merge controladorNuevo: Merge made by the 'recursive' strategy.
+7631c6ab056b371af05321c791470bbbb03b976f a77eeceecac8900595860570456899c6b9ba6b81 Denis <5945069@alu.murciaeduca.es> 1763969656 +0100	merge vistaShow: Merge made by the 'recursive' strategy.
+a77eeceecac8900595860570456899c6b9ba6b81 4b278ebfc674ba71ce4ba7f4303786bb77fe2a7f Denis <5945069@alu.murciaeduca.es> 1763969785 +0100	merge vistaEditCreate: Merge made by the 'recursive' strategy.
+4b278ebfc674ba71ce4ba7f4303786bb77fe2a7f 95190a815254c02dd8e7c002558825453ce47a4f Denis <5945069@alu.murciaeduca.es> 1763969891 +0100	merge nuevoIndex: Merge made by the 'recursive' strategy.
+95190a815254c02dd8e7c002558825453ce47a4f 236dbf2ac8f03c6727308102a9cfab021b2132e4 Denis <5945069@alu.murciaeduca.es> 1763973214 +0100	commit: eportfolio en funcionamiento

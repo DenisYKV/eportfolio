@@ -1,0 +1,37 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:DenisYKV/eportfolio.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+	vscode-merge-base = origin/master
+[remote "upstream"]
+	url = git@github.com:2DAW-CarlosIII/eportfolio_g4.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "RutasCreadas"]
+	vscode-merge-base = origin/master
+[branch "nuevoLayout"]
+	vscode-merge-base = origin/master
+[branch "ejercicioVistas"]
+	vscode-merge-base = origin/master
+[branch "rutasRama"]
+	vscode-merge-base = origin/master
+[branch "controladorNuevo"]
+	vscode-merge-base = origin/master
+[branch "CriterioEvaluacion"]
+	vscode-merge-base = origin/master
+[branch "correcciones"]
+	vscode-merge-base = origin/master
+[branch "clavesFK"]
+	vscode-merge-base = origin/master
+[branch "autentificacionEportfolio"]
+	vscode-merge-base = origin/master
+[branch "autentificacionesAdrian"]
+	vscode-merge-base = origin/master
+[branch "avatar"]
+	vscode-merge-base = origin/master
