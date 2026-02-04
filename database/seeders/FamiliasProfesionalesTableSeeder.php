@@ -3,9 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\FamiliaProfesional;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class FamiliasProfesionalesTableSeeder extends Seeder
 {
@@ -15,43 +13,43 @@ class FamiliasProfesionalesTableSeeder extends Seeder
     public function run(): void
     {
         FamiliaProfesional::truncate();
+
         foreach (self::$familias_profesionales as $familia) {
-            FamiliaProfesional::insert([
+            FamiliaProfesional::create([
                 'codigo' => $familia['codigo'],
                 'nombre' => $familia['nombre'],
             ]);
         }
-        $this->command->info('¡Tabla familias_profesionales inicializada con datos!');
+
+        $this->command->info('Tabla familias_profesionales inicializada con datos');
     }
 
-/* `marcapersonalfp`.`familias_profesionales` */
-public static $familias_profesionales = array(
-  array('codigo' => 'ADG','nombre' => 'ACTIVIDADES FÍSICAS Y DEPORTIVAS'),
-  array('codigo' => 'AFD','nombre' => 'ADMINISTRACIÓN Y GESTIÓN'),
-  array('codigo' => 'AGA','nombre' => 'AGRARIA'),
-  array('codigo' => 'ARA','nombre' => 'ARTES Y ARTESANÍAS'),
-  array('codigo' => 'ARG','nombre' => 'ARTES GRÁFICAS'),
-  array('codigo' => 'COM','nombre' => 'COMERCIO Y MARKETING'),
-  array('codigo' => 'ELE','nombre' => 'ELECTRICIDAD Y ELECTRÓNICA'),
-  array('codigo' => 'ENA','nombre' => 'ENERGÍA Y AGUA'),
-  array('codigo' => 'EOC','nombre' => 'EDIFICACIÓN Y OBRA CIVIL'),
-  array('codigo' => 'FME','nombre' => 'FABRICACIÓN MECÁNICA'),
-  array('codigo' => 'HOT','nombre' => 'HOSTELERÍA Y TURISMO'),
-  array('codigo' => 'IEX','nombre' => 'INDUSTRIAS EXTRACTIVAS'),
-  array('codigo' => 'IFC','nombre' => 'INFORMÁTICA Y COMUNICACIONES'),
-  array('codigo' => 'IMA','nombre' => 'INSTALACIÓN Y MANTENIMIENTO'),
-  array('codigo' => 'IMP','nombre' => 'IMAGEN PERSONAL'),
-  array('codigo' => 'IMS','nombre' => 'IMAGEN Y SONIDO'),
-  array('codigo' => 'INA','nombre' => 'INDUSTRIAS ALIMENTARIAS'),
-  array('codigo' => 'MAM','nombre' => 'MADERA, MUEBLE Y CORCHO'),
-  array('codigo' => 'MAP','nombre' => 'MARITÍMO-PESQUERA'),
-  array('codigo' => 'QUI','nombre' => 'QUÍMICA'),
-  array('codigo' => 'SAN','nombre' => 'SANIDAD'),
-  array('codigo' => 'SEA','nombre' => 'SEGURIDAD Y MEDIO AMBIENTE'),
-  array('codigo' => 'SSC','nombre' => 'SERVICIOS SOCIOCULTURALES Y A LA COMUNIDAD'),
-  array('codigo' => 'TCP','nombre' => 'TEXTIL, CONFECCIÓN Y PIEL'),
-  array('codigo' => 'TMV','nombre' => 'TRANSPORTE Y MANTENIMIENTO DE VEHÍCULOS'),
-  array('codigo' => 'VIC','nombre' => 'VIDRIO Y CERÁMICA')
-);
-
+    public static $familias_profesionales = [
+        ['codigo' => 'ADG','nombre' => 'ACTIVIDADES FÍSICAS Y DEPORTIVAS'],
+        ['codigo' => 'AFD','nombre' => 'ADMINISTRACIÓN Y GESTIÓN'],
+        ['codigo' => 'AGA','nombre' => 'AGRARIA'],
+        ['codigo' => 'ARA','nombre' => 'ARTES Y ARTESANÍAS'],
+        ['codigo' => 'ARG','nombre' => 'ARTES GRÁFICAS'],
+        ['codigo' => 'COM','nombre' => 'COMERCIO Y MARKETING'],
+        ['codigo' => 'ELE','nombre' => 'ELECTRICIDAD Y ELECTRÓNICA'],
+        ['codigo' => 'ENA','nombre' => 'ENERGÍA Y AGUA'],
+        ['codigo' => 'EOC','nombre' => 'EDIFICACIÓN Y OBRA CIVIL'],
+        ['codigo' => 'FME','nombre' => 'FABRICACIÓN MECÁNICA'],
+        ['codigo' => 'HOT','nombre' => 'HOSTELERÍA Y TURISMO'],
+        ['codigo' => 'IEX','nombre' => 'INDUSTRIAS EXTRACTIVAS'],
+        ['codigo' => 'IFC','nombre' => 'INFORMÁTICA Y COMUNICACIONES'],
+        ['codigo' => 'IMA','nombre' => 'INSTALACIÓN Y MANTENIMIENTO'],
+        ['codigo' => 'IMP','nombre' => 'IMAGEN PERSONAL'],
+        ['codigo' => 'IMS','nombre' => 'IMAGEN Y SONIDO'],
+        ['codigo' => 'INA','nombre' => 'INDUSTRIAS ALIMENTARIAS'],
+        ['codigo' => 'MAM','nombre' => 'MADERA, MUEBLE Y CORCHO'],
+        ['codigo' => 'MAP','nombre' => 'MARÍTIMO-PESQUERA'],
+        ['codigo' => 'QUI','nombre' => 'QUÍMICA'],
+        ['codigo' => 'SAN','nombre' => 'SANIDAD'],
+        ['codigo' => 'SEA','nombre' => 'SEGURIDAD Y MEDIO AMBIENTE'],
+        ['codigo' => 'SSC','nombre' => 'SERVICIOS SOCIOCULTURALES Y A LA COMUNIDAD'],
+        ['codigo' => 'TCP','nombre' => 'TEXTIL, CONFECCIÓN Y PIEL'],
+        ['codigo' => 'TMV','nombre' => 'TRANSPORTE Y MANTENIMIENTO DE VEHÍCULOS'],
+        ['codigo' => 'VIC','nombre' => 'VIDRIO Y CERÁMICA'],
+    ];
 }
