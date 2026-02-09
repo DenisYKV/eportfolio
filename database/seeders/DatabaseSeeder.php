@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Http\Controllers\CiclosFormativosController;
+use App\Models\CicloFormativo;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Eloquent\Model;
@@ -21,11 +22,12 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-        /*User::factory()->create([
+        /* User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
-        ]);
-        */
+        ]); */
+
+         User::factory(10)->create();
 
         Model::unguard();
         Schema::disableForeignKeyConstraints();
@@ -34,7 +36,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(FamiliasProfesionalesTableSeeder::class);
 
-        $this->call(CiclosFormativosTableSeeder::class);
+        //$this->call(CiclosFormativosTableSeeder::class);
+        CicloFormativo::factory(10)->create();
 
         $this->call(ModulosFormativosTableSeeder::class);
 
