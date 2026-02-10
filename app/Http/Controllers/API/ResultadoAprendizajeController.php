@@ -14,10 +14,12 @@ class ResultadoAprendizajeController extends Controller
      */
     public function index(Request $request)
     {
+        $search = $request->query('search', '');
+
         $query = ResultadoAprendizaje::query();
 
-        if($query) {
-            $query->orWhere('nombre', 'like', '%' .$request->q . '%');
+        if($search) {
+            $query->orWhere('codigo', 'like', '%' .$search . '%');
         }
 
         return ResultadoAprendizajeResource::collection(
@@ -28,13 +30,21 @@ class ResultadoAprendizajeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, $moduloId)
     {
-        $resultado = json_decode($request->getContent(), true);
+        $data = $request->validate([
+            'modulo_formativo_id' => 'required|integer|exists:modulos_formativos,id',
+            'codigo' => 'required|string|unique:resultados_aprendizaje,codigo',
+            'descripcion' => 'nullable|string',
+            'peso_porcentaje' => 'required|numeric|min:0|max:100',
+            'orden' => 'required|integer|min:1'
+        ]);
 
-        $resultado = ResultadoAprendizaje::create($resultado);
+        $data['modulo_formativo_id'] = $moduloId;
 
-        return new ResultadoAprendizajeResource($resultado);
+        $resultadoAprendizaje = ResultadoAprendizaje::create($data);
+
+        return new ResultadoAprendizajeResource($resultadoAprendizaje);
     }
 
     /**

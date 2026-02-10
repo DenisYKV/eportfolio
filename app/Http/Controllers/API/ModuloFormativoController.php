@@ -11,8 +11,14 @@ class ModuloFormativoController extends Controller
 {
     public function index(Request $request, $cicloId)
     {
+       $search = $request->query('search', '');
+
         return ModuloFormativoResource::collection(
             ModuloFormativo::where('ciclo_formativo_id', $cicloId)
+                ->where(function ($query) use ($search) {
+                    $query->where('nombre', 'like', "%{$search}%")
+                        ->orWhere('codigo', 'like', "%{$search}%");
+                })
                 ->orderBy($request->sort ?? 'id', $request->order ?? 'asc')
                 ->paginate($request->per_page)
         );
@@ -20,7 +26,14 @@ class ModuloFormativoController extends Controller
 
     public function store(Request $request, $cicloId)
     {
-        $data = json_decode($request->getContent(), true);
+        $data = $request->validate([
+            'nombre' => 'required|string|max:255',
+            'codigo' => 'required|string|unique:modulos_formativos,codigo',
+            'descripcion' => 'nullable|string',
+            'horas_totales' => 'required|integer|min:1',
+            'curso_escolar' => 'required|string|max:255',
+            'centro' => 'required|string|max:255',
+        ]);
         $data['ciclo_formativo_id'] = $cicloId;
 
         $modulo = ModuloFormativo::create($data);

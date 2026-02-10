@@ -30,9 +30,15 @@ class CriterioEvaluacionController extends Controller
      */
     public function store(Request $request)
     {
-        $criterioEvaluacion = json_decode($request->getContent(), true);
+        $data = $request->validate([
+            'resultado_aprendizaje_id' => 'required|integer|exists:resultados_aprendizaje,id',
+            'codigo' => 'required|string|unique:criterios_evaluacion,codigo',
+            'descripcion' => 'nullable|string',
+            'peso_porcentaje' => 'required|numeric|min:0|max:100',
+            'orden' => 'required|integer|min:1'
+        ]);
 
-        $criterioEvaluacion = CriterioEvaluacion::create($criterioEvaluacion);
+        $criterioEvaluacion = CriterioEvaluacion::create($data);
 
         return new CriterioEvaluacionResource($criterioEvaluacion);
     }

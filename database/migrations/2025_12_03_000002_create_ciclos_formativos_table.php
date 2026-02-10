@@ -12,8 +12,8 @@ return new class extends Migration
             $table->id();
             $table -> string('familia_profesional_id')->nullable();
             $table -> string('nombre', 255);
-            $table -> string('codigo', 50);
-            $table->enum('grado', ['medio', 'superior', 'basica', 'C.E. (superior)', 'C.E. (medio)']);
+            $table -> string('codigo', 50)->unique()->nullable();
+            $table->enum('grado', ['basico', 'medio', 'superior']);
             $table -> text('descripcion')->nullable();
             $table->timestamps();
         });

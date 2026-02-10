@@ -20,6 +20,15 @@ class CriterioEvaluacion extends Model
         'orden',
     ];
 
+    public static $filterColumns = [
+        'id',
+        'resultado_aprendizaje_id',
+        'codigo',
+        'descripcion',
+        'peso_porcentaje',
+        'orden',
+    ];
+
     public function resultadoAprendizaje(): BelongsTo
     {
         return $this->belongsTo(ResultadoAprendizaje::class, 'resultado_aprendizaje_id');

@@ -11,8 +11,14 @@ class CicloFormativoController extends Controller
 {
     public function index(Request $request, $familiaId)
     {
+        $search = $request->query('search', '');
+
         return CicloFormativoResource::collection(
             CicloFormativo::where('familia_profesional_id', $familiaId)
+                ->where(function ($query) use ($search) {
+                    $query->where('nombre', 'like', "%{$search}%")
+                        ->orWhere('codigo', 'like', "%{$search}%");
+                })
                 ->orderBy($request->sort ?? 'id', $request->order ?? 'asc')
                 ->paginate($request->per_page)
         );
@@ -20,12 +26,18 @@ class CicloFormativoController extends Controller
 
     public function store(Request $request, $familiaId)
     {
-        $data = json_decode($request->getContent(), true);
-        $data['familia_profesional_id'] = $familiaId;
+        $d = $request->validate([
+            'nombre' => 'required|string|max:255',
+            'familia_profesional_id' => 'required|exists:familias,id',
+            'codigo' => 'required|string|unique:ciclos_formativos,codigo',
+            'grado' => 'required|in:basico,medio,superior',
+            'descripcion' => 'nullable|string',
+        ]);
+        $d['familia_profesional_id'] = $familiaId;
 
-        $ciclo = CicloFormativo::create($data);
+        $cicloFormativo = CicloFormativo::create($d);
 
-        return new CicloFormativoResource($ciclo);
+        return new CicloFormativoResource($cicloFormativo);
     }
 
     public function show($familiaId, CicloFormativo $cicloFormativo)
@@ -51,19 +63,22 @@ class CicloFormativoController extends Controller
         return new CicloFormativoResource($cicloFormativo);
     }
 
-    public function destroy($familiaId, CicloFormativo $cicloFormativo)
+    public function destroy($familiaId, Request $request, CicloFormativo $cicloFormativo)
     {
+
+
         if ($cicloFormativo->familia_profesional_id != $familiaId) {
             abort(404);
         }
 
         try {
             $cicloFormativo->delete();
-            return response()->json(null, 204);
+            return response()->json(['message' => 'CicloFormativo eliminado correctamente'], 200);
         } catch (\Exception $e) {
             return response()->json([
                 'message' => 'Error: ' . $e->getMessage()
             ], 400);
         }
+
     }
 }
