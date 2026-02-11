@@ -5,75 +5,96 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CriterioEvaluacionResource;
 use App\Models\CriterioEvaluacion;
+use App\Models\ResultadoAprendizaje;
 use Illuminate\Http\Request;
+use LDAP\Result;
 
 class CriterioEvaluacionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index(Request $request, ResultadoAprendizaje $resultadoAprendizaje)
     {
-        $query = CriterioEvaluacion::query();
-
-        if($request) {
-            $query->orWhere('nombre', 'like', '%' .$request->q . '%');
-        }
+        $search = $request->query('search', '');
 
         return CriterioEvaluacionResource::collection(
-            $query->orderBy($request->sort ?? 'id', $request->order ?? 'asc')
-            ->paginate($request->per_page));
+            CriterioEvaluacion::where('resultado_aprendizaje_id', $resultadoAprendizaje->id)
+                ->where(function ($query) use ($search) {
+                    $query->where('codigo', 'like', "%{$search}%")
+                        ->orWhere('descripcion', 'like', "%{$search}%");
+                })
+                ->orderBy($request->sort ?? 'id', $request->order ?? 'asc')
+                ->paginate($request->per_page)
+        );
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, $resultadoAprendizajeId)
     {
         $data = $request->validate([
-            'resultado_aprendizaje_id' => 'required|integer|exists:resultados_aprendizaje,id',
             'codigo' => 'required|string|unique:criterios_evaluacion,codigo',
-            'descripcion' => 'nullable|string',
+            'descripcion' => 'required|string',
             'peso_porcentaje' => 'required|numeric|min:0|max:100',
             'orden' => 'required|integer|min:1'
         ]);
+
+        $data['resultado_aprendizaje_id'] = $resultadoAprendizajeId;
 
         $criterioEvaluacion = CriterioEvaluacion::create($data);
 
         return new CriterioEvaluacionResource($criterioEvaluacion);
     }
-
     /**
      * Display the specified resource.
      */
-    public function show(CriterioEvaluacion $criterioEvaluacion)
+   public function show($resultadoAprendizajeId, CriterioEvaluacion $criterioEvaluacion)
     {
+        if ($criterioEvaluacion->resultado_aprendizaje_id != $resultadoAprendizajeId) {
+            abort(404);
+        }
+
         return new CriterioEvaluacionResource($criterioEvaluacion);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, CriterioEvaluacion $criterioEvaluacion)
+     public function update(Request $request, $resultadoAprendizajeId, CriterioEvaluacion $criterioEvaluacion)
     {
-        $criterioEvaluacionData = json_decode($request->getContent(), true);
-        $criterioEvaluacion->update($criterioEvaluacionData);
+        if ($criterioEvaluacion->resultado_aprendizaje_id != $resultadoAprendizajeId) {
+            abort(404);
+        }
+
+        $data = json_decode($request->getContent(), true);
+        $data['resultado_aprendizaje_id'] = $resultadoAprendizajeId;
+
+        $criterioEvaluacion->update($data);
 
         return new CriterioEvaluacionResource($criterioEvaluacion);
     }
 
+
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CriterioEvaluacion $criterioEvaluacion)
+    public function destroy($resultadoAprendizajeId, CriterioEvaluacion $criterioEvaluacion)
     {
+
+        if ($criterioEvaluacion->resultado_aprendizaje_id != $resultadoAprendizajeId) {
+            abort(404);
+        }
+
         try {
             $criterioEvaluacion->delete();
-            return response()->json(null, 204);
+            return response()->json(['message' => 'Criterio de Evaluación eliminado correctamente'], 200);
         } catch (\Exception $e) {
             return response()->json([
                 'message' => 'Error: ' . $e->getMessage()
             ], 400);
         }
+
     }
 }

@@ -17,7 +17,7 @@ class ModuloFormativoFactory extends Factory
     public function definition(): array
     {
         return [
-            'ciclo_formativo_id' => fake()->numberBetween(1, 10),
+            'ciclo_formativo_id' => \App\Models\CicloFormativo::factory(),
             'nombre' => fake()->name(),
             'codigo' => fake()->unique()->word(),
             'descripcion' => fake()->text(),

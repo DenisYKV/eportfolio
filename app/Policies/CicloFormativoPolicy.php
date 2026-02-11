@@ -29,7 +29,9 @@ class CicloFormativoPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        
+        return $user->isAdministrator();
+
     }
 
     /**
@@ -37,7 +39,7 @@ class CicloFormativoPolicy
      */
     public function update(User $user, CicloFormativo $cicloFormativo): bool
     {
-        return false;
+       return $user->isAdministrator();
     }
 
     /**
@@ -45,7 +47,7 @@ class CicloFormativoPolicy
      */
     public function delete(User $user, CicloFormativo $cicloFormativo): bool
     {
-        return false;
+        return $user->isAdministrator();
     }
 
     /**

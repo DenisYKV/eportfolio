@@ -72,7 +72,7 @@ class ModuloFormativoController extends Controller
 
         try {
             $moduloFormativo->delete();
-            return response()->json(null, 204);
+            return response()->json(['message' => 'ModuloFormativo eliminado correctamente'], 200);
         } catch (\Exception $e) {
             return response()->json([
                 'message' => 'Error: ' . $e->getMessage()

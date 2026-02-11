@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\CicloFormativoResource;
 use App\Models\CicloFormativo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class CicloFormativoController extends Controller
 {
@@ -24,11 +25,13 @@ class CicloFormativoController extends Controller
         );
     }
 
-    public function store(Request $request, $familiaId)
+    public function store(Request $request, CicloFormativo $cicloFormativo, $familiaId)
     {
+        //Gate::authorize('create', $cicloFormativo);
+
+
         $d = $request->validate([
             'nombre' => 'required|string|max:255',
-            'familia_profesional_id' => 'required|exists:familias,id',
             'codigo' => 'required|string|unique:ciclos_formativos,codigo',
             'grado' => 'required|in:basico,medio,superior',
             'descripcion' => 'nullable|string',
@@ -51,6 +54,7 @@ class CicloFormativoController extends Controller
 
     public function update(Request $request, $familiaId, CicloFormativo $cicloFormativo)
     {
+        //Gate::authorize('update', $cicloFormativo);
         if ($cicloFormativo->familia_profesional_id != $familiaId) {
             abort(404);
         }
@@ -63,9 +67,10 @@ class CicloFormativoController extends Controller
         return new CicloFormativoResource($cicloFormativo);
     }
 
-    public function destroy($familiaId, Request $request, CicloFormativo $cicloFormativo)
+    public function destroy($familiaId,  CicloFormativo $cicloFormativo)
     {
 
+        //Gate::authorize('delete', $cicloFormativo);
 
         if ($cicloFormativo->familia_profesional_id != $familiaId) {
             abort(404);
@@ -79,6 +84,5 @@ class CicloFormativoController extends Controller
                 'message' => 'Error: ' . $e->getMessage()
             ], 400);
         }
-
     }
 }
