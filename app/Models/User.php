@@ -50,14 +50,19 @@ class User extends Authenticatable
     /**
      * Perform pre-authorization checks.
      */
-   public function before(User $user, string $ability): bool|null
-{
-    if ($user->isAdministrator()) {
-        return true;
-    }
+   public function esAdministrador(): bool
+   {
+       return $this->email === config('app.admin.email');
+   }
 
-    return null;
-}
+   public function esEstudiante(): bool
+   {
+       return Matricula::where('estudiante_id', $this->id)->exists();
+   }
 
+   public function esDocente(): bool
+   {
+       return ModuloFormativo::where('docente_id', $this->id)->exists();
+   }
 
 }

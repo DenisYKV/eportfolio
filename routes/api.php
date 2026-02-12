@@ -11,8 +11,11 @@ use App\Http\Controllers\API\ResultadoAprendizajeController;
 use App\Http\Controllers\API\AsignacionRevisionController;
 use App\Http\Controllers\API\CriterioTareaController;
 use App\Http\Controllers\API\EvidenciasController as APIEvidenciasController;
+use App\Http\Controllers\API\RolController;
 use App\Http\Controllers\API\TareasController;
 use App\Http\Controllers\EvidenciasController;
+use App\Models\Matricula;
+use App\Models\ModuloFormativo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Psr\Http\Message\ServerRequestInterface;
@@ -20,12 +23,34 @@ use Tqdev\PhpCrudApi\Api;
 use Tqdev\PhpCrudApi\Config\Config;
 
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
-});
+
 
 
 Route::prefix('v1')->group(function () {
+
+    Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
+    $u= $request->user();
+
+    if ($u->esAdministrador()) {
+        return response()->json(['roles' => ['administrador']]);
+    }
+    $roles=[];
+    if($u->esDocente()) {
+        $roles[] = 'docente';
+    }
+    if ($u->esEstudiante()) {
+        $roles[] = 'estudiante';
+    }
+
+    return response()->json(['roles' => $roles]);
+
+});
+
+
+    Route::apiResource('roles', RolController::class)
+        ->parameters(['roles' => 'rol']);
+
+    Route::get('modulos-impartidos', [ModuloFormativoController::class, 'modulosImpartidos']);
 
     Route::apiResource('modulos-formativos.resultados-aprendizaje', ResultadoAprendizajeController::class)->parameters([
         'modulos-formativos' => 'moduloFormativo',

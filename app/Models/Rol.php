@@ -5,18 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Evidencia extends Model
+class Rol extends Model
 {
+    /** @use HasFactory<\Database\Factories\RolFactory> */
     use HasFactory;
-    protected $table = 'evidencias';
+    protected $table = 'roles';
 
     protected $fillable = [
-    'estudiante_id',
-
-    'tarea_id',
-    'url',
-    'descripcion',
-    'estado_validacion',
+    'name',
+    'description',
 ];
-
 }

@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\ResultadoAprendizaje;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use LDAP\Result;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
@@ -17,7 +19,7 @@ class CriterioEvaluacionFactory extends Factory
     public function definition(): array
     {
         return [
-            'resultado_aprendizaje_id' => fake()->numberBetween(1, 10),
+            'resultado_aprendizaje_id' => ResultadoAprendizaje::factory(),
             'codigo' => fake()->unique()->word(),
             'descripcion' => fake()->text(),
             'peso_porcentaje' => fake()->numberBetween(1, 100),

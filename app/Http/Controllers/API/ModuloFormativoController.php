@@ -24,6 +24,21 @@ class ModuloFormativoController extends Controller
         );
     }
 
+    public function modulosImpartidos(Request $request)
+    {
+        $search = $request->query('search', '');
+
+        return ModuloFormativoResource::collection(
+            ModuloFormativo::where('docente_id', $request->user()->id)
+                ->where(function ($query) use ($search) {
+                    $query->where('nombre', 'like', "%{$search}%")
+                        ->orWhere('codigo', 'like', "%{$search}%");
+                })
+                ->orderBy($request->sort ?? 'id', $request->order ?? 'asc')
+                ->paginate($request->per_page)
+        );
+    }
+
     public function store(Request $request, $cicloId)
     {
         $data = $request->validate([
@@ -35,6 +50,7 @@ class ModuloFormativoController extends Controller
             'centro' => 'required|string|max:255',
         ]);
         $data['ciclo_formativo_id'] = $cicloId;
+        $data['docente_id'] = $request->user()->id;
 
         $modulo = ModuloFormativo::create($data);
 

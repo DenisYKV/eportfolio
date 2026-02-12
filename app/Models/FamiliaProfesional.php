@@ -12,8 +12,13 @@ class FamiliaProfesional extends Model
 
     protected $fillable = [
         'nombre',
-        'descripcion',
         'codigo',
-        'imagen',
+        'descripcion',
+    ];
+
+    public static $filterColumns = [
+        'nombre',
+        'codigo',
+        'descripcion',
     ];
 }

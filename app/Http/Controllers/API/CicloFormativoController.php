@@ -5,17 +5,19 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\CicloFormativoResource;
 use App\Models\CicloFormativo;
+use App\Models\FamiliaProfesional;
+use FFI;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
 class CicloFormativoController extends Controller
 {
-    public function index(Request $request, $familiaId)
+    public function index(Request $request, FamiliaProfesional $familiaProfesional)
     {
         $search = $request->query('search', '');
 
         return CicloFormativoResource::collection(
-            CicloFormativo::where('familia_profesional_id', $familiaId)
+            CicloFormativo::where('familia_profesional_id', $familiaProfesional->id)
                 ->where(function ($query) use ($search) {
                     $query->where('nombre', 'like', "%{$search}%")
                         ->orWhere('codigo', 'like', "%{$search}%");
@@ -25,9 +27,9 @@ class CicloFormativoController extends Controller
         );
     }
 
-    public function store(Request $request, CicloFormativo $cicloFormativo, $familiaId)
+    public function store(Request $request, CicloFormativo $cicloFormativo, FamiliaProfesional $familiaProfesional)
     {
-        //Gate::authorize('create', $cicloFormativo);
+        Gate::authorize('create', $cicloFormativo);
 
 
         $d = $request->validate([
@@ -36,43 +38,43 @@ class CicloFormativoController extends Controller
             'grado' => 'required|in:basico,medio,superior',
             'descripcion' => 'nullable|string',
         ]);
-        $d['familia_profesional_id'] = $familiaId;
+        $d['familia_profesional_id'] = $familiaProfesional->id;
 
         $cicloFormativo = CicloFormativo::create($d);
 
         return new CicloFormativoResource($cicloFormativo);
     }
 
-    public function show($familiaId, CicloFormativo $cicloFormativo)
+    public function show(FamiliaProfesional $familiaProfesional, CicloFormativo $cicloFormativo)
     {
-        if ($cicloFormativo->familia_profesional_id != $familiaId) {
+        if ($cicloFormativo->familia_profesional_id != $familiaProfesional->id) {
             abort(404);
         }
 
         return new CicloFormativoResource($cicloFormativo);
     }
 
-    public function update(Request $request, $familiaId, CicloFormativo $cicloFormativo)
+    public function update(Request $request, FamiliaProfesional $familiaProfesional, CicloFormativo $cicloFormativo)
     {
-        //Gate::authorize('update', $cicloFormativo);
-        if ($cicloFormativo->familia_profesional_id != $familiaId) {
+        Gate::authorize('update', $cicloFormativo);
+        if ($cicloFormativo->familia_profesional_id != $familiaProfesional->id) {
             abort(404);
         }
 
         $data = json_decode($request->getContent(), true);
-        $data['familia_profesional_id'] = $familiaId;
+        $data['familia_profesional_id'] = $familiaProfesional->id;
 
         $cicloFormativo->update($data);
 
         return new CicloFormativoResource($cicloFormativo);
     }
 
-    public function destroy($familiaId,  CicloFormativo $cicloFormativo)
+    public function destroy(FamiliaProfesional $familiaProfesional, CicloFormativo $cicloFormativo)
     {
 
-        //Gate::authorize('delete', $cicloFormativo);
+        Gate::authorize('delete', $cicloFormativo);
 
-        if ($cicloFormativo->familia_profesional_id != $familiaId) {
+        if ($cicloFormativo->familia_profesional_id != $familiaProfesional->id) {
             abort(404);
         }
 
