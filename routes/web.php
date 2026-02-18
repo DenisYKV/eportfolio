@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CiclosFormativosController;
 use App\Http\Controllers\EvidenciasController;
 use App\Http\Controllers\FamiliasProfesionalesController;
+use App\Http\Controllers\PortfolioExportController;
 use App\Http\Controllers\PortfolioImportController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResultadosAprendizajesController;
@@ -123,6 +124,8 @@ Route::middleware(['auth'])->group(function () {
     // Importar desde GitHub
     Route::post('/portfolio/import/github', [PortfolioImportController::class, 'importGitHub'])
         ->name('portfolio.import.github');
+
 });
 require __DIR__ . '/auth.php';
 require __DIR__ . '/analisis.php';
+require __DIR__ . '/exports.php';
