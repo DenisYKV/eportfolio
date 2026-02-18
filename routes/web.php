@@ -125,3 +125,4 @@ Route::middleware(['auth'])->group(function () {
         ->name('portfolio.import.github');
 });
 require __DIR__ . '/auth.php';
+require __DIR__ . '/analisis.php';
